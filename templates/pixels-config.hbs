@@ -1,0 +1,56 @@
+{{#*inline "pixelDevice"}}
+<div class="pixel flexrow {{ cssClass }}" data-pixel-id="{{ pixelId }}">
+    <h3>
+        <i class="fa-solid {{ denominationIcon }}"></i>
+        {{ name }}
+        <span class="denomination">({{ denomination }})</span>
+    </h3>
+    <span class="rssi"><i class="fa-solid {{ connectionIcon }}"></i> {{ rssi }}</span>
+    {{#if battery}}
+    <span class="battery"><i class="fa-solid fa-battery-full"></i> {{ battery }}%</span>
+    {{/if}}
+    <button type="button" class="flex0 fa-solid fa-times icon" data-action="disconnectPixel"
+            data-tooltip="{{ disconnectTooltip }}" aria-label="{{ localize disconnectTooltip }}"></button>
+</div>
+{{/inline}}
+
+<section>
+    <figure>
+        <img class="noborder" src="modules/pixels-bridge/ui/pixels-logo.webp" width="437" height="170"
+             alt="{{ localize "PIXELS.CONFIG.Logo" }}">
+    </figure>
+
+    {{! Relay connection status }}
+    <div class="relay-status flexrow">
+        <span class="relay-dot {{#if relayConnected}}relay-connected{{else}}relay-disconnected{{/if}}"></span>
+        <span>{{#if relayConnected}}{{ localize "PIXELS.CONFIG.RelayConnected" }}{{else}}{{ localize "PIXELS.CONFIG.RelayDisconnected" }}{{/if}}</span>
+    </div>
+
+    {{#if hasDevices}}
+    <section class="devices">
+        {{#if connected.length}}
+        <h2>{{ localize "PIXELS.CONFIG.ConnectedPixels" }}</h2>
+        {{/if}}
+        {{#each connected}}
+        {{> pixelDevice }}
+        {{/each}}
+
+        {{#if disconnected.length}}
+        <h2>{{ localize "PIXELS.CONFIG.DisconnectedPixels" }}</h2>
+        {{/if}}
+        {{#each disconnected}}
+        {{> pixelDevice }}
+        {{/each}}
+    </section>
+
+    {{else}}
+    <p>{{ localize "PIXELS.CONFIG.NoPixels" }}</p>
+    {{/if}}
+
+    <footer class="flexrow">
+        <button type="button" data-action="requestPixel">
+            <i class="fa-solid fa-plus"></i>
+            <span>{{ localize "PIXELS.CONFIG.ACTIONS.Add" }}</span>
+        </button>
+    </footer>
+</section>

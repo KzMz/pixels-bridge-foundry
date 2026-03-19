@@ -1,0 +1,53 @@
+{
+  "PIXELS": {
+    "CONFIG": {
+      "ACTIONS": {
+        "Add": "Add Pixel Die",
+        "Disconnect": "Disconnect",
+        "Forget": "Forget"
+      },
+      "Logo": "Pixels Electronic Dice Logo",
+      "NoPixels": "No Pixels devices have been configured yet. Connect a die using the Pixels Bridge app on your phone, or click 'Add Pixel Die' to send a scan request to the app.",
+      "Title": "Pixels Electronic Dice Configuration (Bridge)",
+      "ConnectedPixels": "Connected Pixels",
+      "DisconnectedPixels": "Disconnected Pixels",
+      "RelayConnected": "Bridge Relay Connected",
+      "RelayDisconnected": "Bridge Relay Disconnected",
+      "PhonePrompt": "Please open the Pixels Bridge app on your phone and scan for dice."
+    },
+    "ERRORS": {
+      "STATUS": {
+        "Failure": "Unable to re-connect to Pixel {name}. The bridge app will attempt automatic reconnection.",
+        "Lost": "Lost connection to Pixel {name}.",
+        "Success": "Re-established connection to Pixel {name}."
+      },
+      "ConnectFailed": "Failed to connect to die. Please check the Pixels Bridge app on your phone.",
+      "ReconnectFailed": "Some previously-configured Pixels dice were not able to automatically re-connect.",
+      "BridgeConnected": "Connected to Pixels Bridge relay server.",
+      "BridgeDisconnected": "Lost connection to Pixels Bridge relay server.",
+      "NoRelayUrl": "Please set the Bridge Relay URL in the Pixels Bridge module settings."
+    },
+    "SETTINGS": {
+      "CONFIG": {
+        "Label": "Configure Pixels",
+        "Name": "Pixels Configuration"
+      },
+      "ENABLED": {
+        "Hint": "Enable use of Pixels Electronic Dice via the BLE Bridge relay",
+        "Name": "Enable Pixels Bridge"
+      },
+      "RELAY": {
+        "Hint": "WebSocket URL of the Pixels Bridge relay server (e.g. wss://your-tunnel.trycloudflare.com)",
+        "Name": "Bridge Relay URL"
+      },
+      "UNPROMPTED": {
+        "Hint": "If enabled, any die roll will be registered with the VTT. If disabled, a roll will only be registered if the VTT is waiting for one, and ignored otherwise.",
+        "Name": "Allow Unprompted Rolls"
+      },
+      "HEARTBEAT": {
+        "Hint": "If enabled, the VTT will periodically check the relay connection every X minutes.",
+        "Name": "Enable Heartbeat"
+      }
+    }
+  }
+}

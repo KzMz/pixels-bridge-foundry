@@ -1,0 +1,31 @@
+{
+  "id": "pixels-bridge",
+  "title": "Pixels Bridge - Electronic Dice (BLE Bridge)",
+  "description": "Integrates Pixels electronic dice via a BLE bridge relay, for systems where direct WebBluetooth is unavailable.",
+  "version": "1.0.0",
+  "url": "https://github.com/KzMz/pixels-bridge-foundry",
+  "manifest": "https://github.com/KzMz/pixels-bridge-foundry/releases/latest/download/module.json",
+  "download": "https://github.com/KzMz/pixels-bridge-foundry/releases/latest/download/pixels-bridge-foundry.zip",
+  "compatibility": {
+    "minimum": 12,
+    "verified": 13
+  },
+  "authors": [
+    {
+      "name": "KzMz"
+    }
+  ],
+  "esmodules": [
+    "scripts/pixels-bridge.mjs"
+  ],
+  "styles": [
+    "styles/pixels.css"
+  ],
+  "languages": [
+    {
+      "lang": "en",
+      "name": "English",
+      "path": "lang/en.json"
+    }
+  ]
+}
