@@ -1,0 +1,3 @@
+# Pixels Bridge for FoundryVTT
+
+Foundry module to handle Pixels devices without passing through WebBluetooth by connecting the dice to an android phone and by forwarding stuff to a relay server. I needed this because my adapter was not working fine with Pixels and I'm fundamentally lazy :)
